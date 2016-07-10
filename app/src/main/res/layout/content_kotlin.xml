@@ -11,26 +11,83 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/text_margin"
-        android:gravity="center_vertical"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/tv_start"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
-        <ImageView
-            android:layout_width="25dp"
-            android:layout_height="20dp"
-            android:adjustViewBounds="true"
-            android:background="@drawable/ic_action_name" />
+            <TextView
+                android:id="@+id/tv_start"
+                style="@style/CustomTextView" />
 
-        <TextView
-            android:id="@+id/tv_end"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="20dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/ic_action_name" />
 
+            <TextView
+                android:id="@+id/tv_end"
+                style="@style/CustomTextView" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/CustomTextView"
+                    android:text=" tvStart!!.text = "
+                    android:textColor="@color/colorPrimary" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/et_demo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/transparent"
+                        android:hint="Enter text..."
+                        android:imeOptions="actionDone"
+                        android:inputType="text"
+                        android:textColor="@color/colorAccent"
+                        android:textColorHint="@color/colorAccent"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tv_demo"
+                        style="@style/CustomTextView"
+                        android:text=""
+                        android:textColor="@color/colorAccent"
+                        android:textSize="15sp"
+                        android:visibility="gone" />
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/ib_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_edit"
+                android:contentDescription="Edit Text" />
+
+        </LinearLayout>
     </LinearLayout>
-
 </android.support.v4.widget.NestedScrollView>

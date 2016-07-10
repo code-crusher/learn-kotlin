@@ -6,8 +6,13 @@ import android.os.Bundle
 import android.support.design.widget.FloatingActionButton
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
+import android.view.KeyEvent
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
+import android.view.inputmethod.EditorInfo
+import android.widget.EditText
+import android.widget.ImageButton
 import android.widget.TextView
 
 class KotlinActivity : AppCompatActivity() {
@@ -19,6 +24,8 @@ class KotlinActivity : AppCompatActivity() {
     // rad right!
     val textStart = "Made with"
     val textEnd = "using Kotlin!"
+    var etDemo = null as EditText?
+    var tvDemo = null as TextView?
 
     // the ? is used to ensure the null exception never comes
     // we are thy saved
@@ -27,7 +34,7 @@ class KotlinActivity : AppCompatActivity() {
         setContentView(R.layout.activity_kotlin)
 
         // the initialising method call
-        init();
+        init()
     }
 
     // no more return type for a method :@
@@ -40,6 +47,11 @@ class KotlinActivity : AppCompatActivity() {
         // eliminate the NULL by using question mark
         val tvStart = findViewById(R.id.tv_start) as TextView?
         val tvEnd = findViewById(R.id.tv_end) as TextView?
+        val ibEdit = findViewById(R.id.ib_edit) as ImageButton?
+
+        // var can be reassigned but a val cannot be
+        etDemo = findViewById(R.id.et_demo) as EditText?
+        tvDemo = findViewById(R.id.tv_demo) as TextView?
 
         // easy val setting
         // not-null assertions(!!)
@@ -52,7 +64,29 @@ class KotlinActivity : AppCompatActivity() {
         // just one line
         fab!!.setOnClickListener { openRepo() }
 
-        //Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG).setAction("Action", null).show()
+        etDemo!!.imeOptions = EditorInfo.IME_ACTION_DONE
+
+        etDemo!!.setOnEditorActionListener(TextView.OnEditorActionListener { textView, i, keyEvent ->
+
+            if (i == EditorInfo.IME_ACTION_SEARCH || i == EditorInfo.IME_ACTION_DONE ||
+                    keyEvent!!.action == KeyEvent.ACTION_DOWN &&
+                            keyEvent!!.keyCode == KeyEvent.KEYCODE_ENTER) {
+                tvDemo!!.text = textView.text
+                tvDemo!!.visibility = View.VISIBLE
+                etDemo!!.visibility = View.GONE
+                true
+            }
+            false
+
+        })
+
+        ibEdit!!.setOnClickListener { editTextView() }
+    }
+
+    private fun editTextView() {
+        tvDemo!!.visibility = View.GONE
+        etDemo!!.text = null
+        etDemo!!.visibility = View.VISIBLE
     }
 
     private fun openRepo() {
