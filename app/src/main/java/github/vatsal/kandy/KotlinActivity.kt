@@ -38,9 +38,10 @@ class KotlinActivity : AppCompatActivity() {
     }
 
     // no more return type for a method :@
+    // fun is a keyword to declare a function
     private fun init() {
 
-        // no more typecasting...loving it already?
+        // declaring and assigning a val as a ToolBar
         val toolbar = findViewById(R.id.toolbar) as Toolbar?
         setSupportActionBar(toolbar)
 
@@ -61,10 +62,8 @@ class KotlinActivity : AppCompatActivity() {
         val fab = findViewById(R.id.fab) as FloatingActionButton?
 
         // finally no more big ClickListeners!!
-        // just one line
+        // just single line
         fab!!.setOnClickListener { openRepo() }
-
-        etDemo!!.imeOptions = EditorInfo.IME_ACTION_DONE
 
         etDemo!!.setOnEditorActionListener(TextView.OnEditorActionListener { textView, i, keyEvent ->
 

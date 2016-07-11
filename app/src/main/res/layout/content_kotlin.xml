@@ -50,7 +50,7 @@
 
                 <TextView
                     style="@style/CustomTextView"
-                    android:text=" tvStart!!.text = "
+                    android:text=" tvDemo!!.text = "
                     android:textColor="@color/colorPrimary" />
 
                 <FrameLayout
