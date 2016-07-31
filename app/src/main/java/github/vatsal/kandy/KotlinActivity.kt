@@ -7,8 +7,6 @@ import android.support.design.widget.FloatingActionButton
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
 import android.view.KeyEvent
-import android.view.Menu
-import android.view.MenuItem
 import android.view.View
 import android.view.inputmethod.EditorInfo
 import android.widget.EditText
@@ -56,7 +54,7 @@ class KotlinActivity : AppCompatActivity() {
 
         // easy val setting
         // not-null assertions(!!)
-        tvStart!!.text = textStart
+        tvStart?.text = textStart
         tvEnd!!.text = textEnd
 
         val fab = findViewById(R.id.fab) as FloatingActionButton?
@@ -95,22 +93,6 @@ class KotlinActivity : AppCompatActivity() {
         startActivity(i)
     }
 
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        menuInflater.inflate(R.menu.menu_kotlin, menu)
-        return true
-    }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        val id = item.itemId
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true
-        }
-        return super.onOptionsItemSelected(item)
-    }
 }
