@@ -68,7 +68,7 @@ class KotlinActivity : AppCompatActivity() {
             if (i == EditorInfo.IME_ACTION_SEARCH || i == EditorInfo.IME_ACTION_DONE ||
                     keyEvent!!.action == KeyEvent.ACTION_DOWN &&
                             keyEvent!!.keyCode == KeyEvent.KEYCODE_ENTER) {
-                tvDemo!!.text = textView.text
+                tvDemo!!.text = "\"" + textView.text + "\""
                 tvDemo!!.visibility = View.VISIBLE
                 etDemo!!.visibility = View.GONE
                 true
@@ -92,7 +92,6 @@ class KotlinActivity : AppCompatActivity() {
         i.data = Uri.parse(url)
         startActivity(i)
     }
-
 
 
 }
