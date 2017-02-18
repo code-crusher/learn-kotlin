@@ -10,8 +10,8 @@ import android.view.KeyEvent
 import android.view.View
 import android.view.inputmethod.EditorInfo
 import android.widget.EditText
-import android.widget.ImageButton
 import android.widget.TextView
+import kotlinx.android.synthetic.main.content_kotlin.*
 
 class KotlinActivity : AppCompatActivity() {
 
@@ -46,7 +46,6 @@ class KotlinActivity : AppCompatActivity() {
         // eliminate the NULL by using question mark
         val tvStart = findViewById(R.id.tv_start) as TextView?
         val tvEnd = findViewById(R.id.tv_end) as TextView?
-        val ibEdit = findViewById(R.id.ib_edit) as ImageButton?
 
         // var can be reassigned but a val cannot be
         etDemo = findViewById(R.id.et_demo) as EditText?
@@ -77,7 +76,7 @@ class KotlinActivity : AppCompatActivity() {
 
         })
 
-        ibEdit!!.setOnClickListener { editTextView() }
+        et_demo!!.setOnClickListener { editTextView() }
     }
 
     private fun editTextView() {
