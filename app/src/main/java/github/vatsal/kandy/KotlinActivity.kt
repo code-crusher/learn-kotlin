@@ -45,7 +45,6 @@ class KotlinActivity : AppCompatActivity() {
 
         // eliminate the NULL by using question mark
         val tvStart = findViewById(R.id.tv_start) as TextView?
-        val tvEnd = findViewById(R.id.tv_end) as TextView?
 
         // var can be reassigned but a val cannot be
         etDemo = findViewById(R.id.et_demo) as EditText?
@@ -92,5 +91,9 @@ class KotlinActivity : AppCompatActivity() {
         startActivity(i)
     }
 
+    // referencing the imported ids
+    private val tvEnd by lazy {
+        tv_end
+    }
 
 }
