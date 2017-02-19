@@ -9,7 +9,6 @@ import android.support.v7.widget.Toolbar
 import android.view.KeyEvent
 import android.view.View
 import android.view.inputmethod.EditorInfo
-import android.widget.EditText
 import android.widget.TextView
 import kotlinx.android.synthetic.main.content_kotlin.*
 
@@ -22,7 +21,6 @@ class KotlinActivity : AppCompatActivity() {
     // rad right!
     val textStart = "Made with"
     val textEnd = "using Kotlin!"
-    var etDemo = null as EditText?
     var tvDemo = null as TextView?
 
     // the ? is used to ensure the null exception never comes
@@ -47,13 +45,12 @@ class KotlinActivity : AppCompatActivity() {
         val tvStart = findViewById(R.id.tv_start) as TextView?
 
         // var can be reassigned but a val cannot be
-        etDemo = findViewById(R.id.et_demo) as EditText?
         tvDemo = findViewById(R.id.tv_demo) as TextView?
 
         // easy val setting
         // not-null assertions(!!)
         tvStart?.text = textStart
-        tvEnd!!.text = textEnd
+        tv_end!!.text = textEnd
 
         val fab = findViewById(R.id.fab) as FloatingActionButton?
 
@@ -92,8 +89,8 @@ class KotlinActivity : AppCompatActivity() {
     }
 
     // referencing the imported ids
-    private val tvEnd by lazy {
-        tv_end
+    private val etDemo by lazy {
+        et_demo
     }
 
 }

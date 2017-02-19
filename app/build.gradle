@@ -29,6 +29,11 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.1.0'
     compile 'com.android.support:design:25.1.0'
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+
+    // Anko
+    compile 'org.jetbrains.anko:anko-sdk15:0.9.1'
+    compile 'org.jetbrains.anko:anko-support-v4:0.9.1'
+    compile 'org.jetbrains.anko:anko-appcompat-v7:0.9.1'
 }
 repositories {
     mavenCentral()
