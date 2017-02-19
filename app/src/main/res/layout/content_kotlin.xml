@@ -10,7 +10,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical">
 
         <LinearLayout
@@ -89,5 +89,18 @@
                 android:contentDescription="Edit Text" />
 
         </LinearLayout>
+
+        <Button
+            android:id="@+id/bt_start_anko"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:background="@color/colorPrimary"
+            android:padding="@dimen/activity_horizontal_margin"
+            android:text="Take me to ANKO"
+            android:textAllCaps="false"
+            android:textColor="#ffffff" />
+
     </LinearLayout>
 </android.support.v4.widget.NestedScrollView>

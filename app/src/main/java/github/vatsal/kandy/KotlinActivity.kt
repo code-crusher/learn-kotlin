@@ -11,6 +11,7 @@ import android.view.View
 import android.view.inputmethod.EditorInfo
 import android.widget.TextView
 import kotlinx.android.synthetic.main.content_kotlin.*
+import org.jetbrains.anko.startActivity
 
 class KotlinActivity : AppCompatActivity() {
 
@@ -73,6 +74,8 @@ class KotlinActivity : AppCompatActivity() {
         })
 
         et_demo!!.setOnClickListener { editTextView() }
+
+        bt_start_anko.setOnClickListener { startActivity<AnkoActivity>() }
     }
 
     private fun editTextView() {
