@@ -15,3 +15,6 @@ This application is a demo to explain kotlin components and syntax. Please refer
 * Twitter - [https://twitter.com/KotlinNewDelhi](https://twitter.com/KotlinNewDelhi)
 * Facebook - [https://www.facebook.com/kotlinNewDelhi/](https://www.facebook.com/kotlinNewDelhi/)
 
+###Reach out to me
+* Twitter - [@Vatsal Bajpai](https://twitter.com/Vatsal__Bajpai)
+* Facebook - [Vatsal Bajpai](https://www.facebook.com/bajpai.vatsal)
