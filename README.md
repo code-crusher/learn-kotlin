@@ -1,4 +1,4 @@
-#KAndy
+#learn-kotlin
 
 This application is a demo to explain kotlin components and syntax. Please refer these blogs along with this app
 
